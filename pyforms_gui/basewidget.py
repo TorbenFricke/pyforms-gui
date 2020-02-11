@@ -162,6 +162,7 @@ class BaseWidget(QFrame):
                     self._handle_text(layout, row)
         elif isinstance(formset, (list, segment)):
             layout = QVBoxLayout()
+            layout.setAlignment(QtCore.Qt.AlignTop)
             self.vlayouts.append(layout)
             for row in formset:
                 if isinstance(row, (list, tuple, vsplitter, hsplitter, segment, no_columns) ):
